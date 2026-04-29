@@ -1,0 +1,118 @@
+:root {
+    --primary: #1a5276;
+    --accent: #16a085;
+    --danger: #c0392b;
+    --bg: #f0f4f8;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--bg);
+    color: #2c3e50;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    color: var(--primary);
+    font-size: 2.5rem;
+    border-bottom: 4px solid var(--accent);
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    text-align: justify;
+    margin-top: 20px;
+}
+
+.card {
+    background: var(--white);
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    text-align: justify;
+}
+
+h2 {
+    color: var(--accent);
+    border-left: 5px solid var(--accent);
+    padding-left: 15px;
+    margin-top: 0;
+}
+
+.ex {
+    color: #7f8c8d;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+.formula-box {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-left: 5px solid var(--danger);
+    padding: 15px;
+    margin: 10px 0;
+    text-align: center;
+    font-size: 1.2rem;
+    border-radius: 6px;
+}
+
+.cs-grid {
+    display: flex;
+    justify-content: space-around;
+    background: #eef7f6;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.deduction {
+    background-color: #fffde7;
+}
+
+.final-result {
+    text-align: center;
+    font-size: 1.4rem;
+    margin-top: 15px;
+}
+
+.final-result span {
+    color: var(--danger);
+    font-weight: bold;
+}
+
+.footer-action {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: white;
+    padding: 18px 40px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 15px rgba(22, 160, 133, 0.4);
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: var(--primary);
+    transform: translateY(-3px);
+}

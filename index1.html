@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Exercícios | Química</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <a href="index.html" class="btn-back">← Voltar para a Teoria</a>
+        <h1>Prática: Soluções e Concentrações</h1>
+        <p class="subtitle">Alice, resolva os desafios abaixo. Use os botões para conferir a interpretação, a estratégia e o cálculo de cada questão!</p>
+    </header>
+
+    <main id="exercicios-lista">
+
+        <div class="exercise-card">
+            <div class="q-header">Questão 01 - (ENEM 2010)</div>
+            <p class="enunciado">Suponha que uma pessoa, para adoçar seu cafezinho, tenha utilizado 3,42 g de sacarose (massa molar igual a 342 g/mol) para uma xícara de 50 mL do líquido. Qual é a concentração final, em mol/L, de sacarose nesse cafezinho?</p>
+            <div class="options">a) 0,02 | <strong>b) 0,2</strong> | c) 2 | d) 200 | e) 2000</div>
+            
+            <button class="btn-step" onclick="toggleStep('q1-1')">🔍 Passo 1: Interpretação</button>
+            <div id="q1-1" class="step-content interp">O exercício nos pede a concentração em mol/L. Sabemos que C em mol/L é nossa concentração Molar (molaridade) e nosso solvente está em mL, logo deve ser convertido para L, que é a unidade de medida usada na fórmula de M.</div>
+            
+            <button class="btn-step" onclick="toggleStep('q1-2')">⚙️ Passo 2: Estratégia</button>
+            <div id="q1-2" class="step-content estrat">
+                Com os seguintes dados fornecidos pelo exercício temos:<br>
+                m<sub>1</sub> = 3,42 g<br>
+                MM = 342 g/mol<br>
+                V = 50 mL &rarr; <strong>0,05 L</strong> (Conversão: 50 / 1000)<br><br>
+                Para achar a molaridade usaremos a fórmula M = m<sub>1</sub> / (MM &middot; V).
+            </div>
+            
+            <button class="btn-step" onclick="toggleStep('q1-3')">✍️ Passo 3: Cálculo Final</button>
+            <div id="q1-3" class="step-content res">
+                M = 3,42 g / (342 g/mol &middot; 0,05 L)<br>
+                <em>(O g no numerador cancela com o g do denominador. O mol que divide embaixo passa para cima).</em><br>
+                M = 0,01 mol / 0,05 L<br>
+                <strong>M = 0,2 mol/L</strong><br><br>
+                Resposta Correta: Alternativa B
+            </div>
+        </div>
+
+        <div class="exercise-card">
+            <div class="q-header">Questão 02 - (ENEM 2021)</div>
+            <p class="enunciado">O álcool 70% (v/v) é recomendado para a antissepsia das mãos. Para prepará-lo, o farmacêutico utiliza álcool 96% (v/v) e água destilada. Para obter 100 mL de álcool 70%, o volume de álcool 96% necessário é, aproximadamente:</p>
+            <div class="options">a) 26 mL | b) 30 mL | c) 70 mL | <strong>d) 73 mL</strong> | e) 96 mL</div>
+            
+            <button class="btn-step" onclick="toggleStep('q2-1')">🔍 Passo 1: Interpretação</button>
+            <div id="q2-1" class="step-content interp">Este exercício trata de uma Diluição. O objetivo é diminuir a concentração de uma solução de álcool (de 96% para 70%) através da adição de água destilada. O conceito fundamental aqui é que a quantidade de álcool puro que retiramos do frasco concentrado será a mesma no frasco final diluído.</div>
+            
+            <button class="btn-step" onclick="toggleStep('q2-2')">⚙️ Passo 2: Estratégia</button>
+            <div id="q2-2" class="step-content estrat">
+                Identificamos os dados da solução inicial (1) e final (2):<br>
+                C<sub>1</sub> = 96% | V<sub>1</sub> = ?<br>
+                C<sub>2</sub> = 70% | V<sub>2</sub> = 100 mL<br><br>
+                Utilizaremos a fórmula de diluição: C<sub>1</sub> &middot; V<sub>1</sub> = C<sub>2</sub> &middot; V<sub>2</sub>.
+            </div>
+            
+            <button class="btn-step" onclick="toggleStep('q2-3')">✍️ Passo 3: Cálculo Final</button>
+            <div id="q2-3" class="step-content res">
+                Isolamos o V<sub>1</sub>:<br>
+                96% &middot; V<sub>1</sub> = 70% &middot; 100 mL<br>
+                V<sub>1</sub> = (70% &middot; 100 mL) / 96%<br>
+                <em>(A unidade % se cancela, restando mL).</em><br>
+                V<sub>1</sub> = 7000 mL / 96<br>
+                <strong>V<sub>1</sub> &approx; 72,91 mL</strong><br><br>
+                Resposta Correta: Alternativa D
+            </div>
+        </div>
+
+        <div class="exercise-card">
+            <div class="q-header">Questão 03 - (ENEM 2016)</div>
+            <p class="enunciado">Para cada litro de etanol produzido em uma indústria são gerados cerca de 18 L de vinhaça. Na produção de 27.000 L de etanol, a quantidade total de fósforo (P), em kg, disponível na vinhaça (teor de 60 mg/L) será mais próxima de:</p>
+            <div class="options">a) 1 | <strong>b) 29</strong> | c) 60 | d) 170 | e) 1 000</div>
+            
+            <button class="btn-step" onclick="toggleStep('q3-1')">🔍 Passo 1: Interpretação</button>
+            <div id="q3-1" class="step-content interp">O exercício pede a massa total de fósforo em kg. Primeiro, precisamos descobrir o volume total de vinhaça. Como a concentração está em mg/L, o resultado da massa sairá inicialmente em mg, exigindo conversão final para kg.</div>
+            
+            <button class="btn-step" onclick="toggleStep('q3-2')">⚙️ Passo 2: Estratégia</button>
+            <div id="q3-2" class="step-content estrat">
+                Volume total de vinhaça: 27.000 L &middot; 18 = <strong>486.000 L</strong><br>
+                Concentração (C): 60 mg/L<br>
+                Fórmula: m = C &middot; V<br>
+                Conversão final: Dividir o valor em mg por 1.000.000 para obter kg.
+            </div>
+            
+            <button class="btn-step" onclick="toggleStep('q3-3')">✍️ Passo 3: Cálculo Final</button>
+            <div id="q3-3" class="step-content res">
+                m = 60 mg/L &middot; 486.000 L<br>
+                <em>(A unidade L se cancela).</em><br>
+                m = 29.160.000 mg<br>
+                Conversão: m = 29.160.000 mg / 1.000.000 mg/kg<br>
+                <strong>m = 29,16 kg</strong><br><br>
+                Resposta Correta: Alternativa B
+            </div>
+        </div>
+
+        <div class="exercise-card">
+            <div class="q-header">Questão 04 - (ENEM 2013)</div>
+            <p class="enunciado">A ingestão de sódio é essencial, mas o excesso pode causar hipertensão. Um sal de cozinha "light" contém 50% de NaCl e 50% de KCl em massa. Em 100 g desse sal, qual a quantidade de matéria (mol) de sódio? (Dados: Na=23; Cl=35,5).</p>
+            <div class="options">a) 0,43 | b) 0,67 | <strong>c) 0,85</strong> | d) 1,34 | e) 1,71</div>
+            
+            <button class="btn-step" onclick="toggleStep('q4-1')">🔍 Passo 1: Interpretação</button>
+            <div id="q4-1" class="step-content interp">O problema pede a quantidade de matéria (mols) especificamente de sódio (Na) em 100g de uma mistura. A mistura tem 50% de NaCl. Logo, primeiro achamos a massa de NaCl, e depois convertemos essa massa para mols.</div>
+            
+            <button class="btn-step" onclick="toggleStep('q4-2')">⚙️ Passo 2: Estratégia</button>
+            <div id="q4-2" class="step-content estrat">
+                Massa de NaCl: 50% de 100 g = <strong>50 g</strong><br>
+                Massa Molar do NaCl: 23 (Na) + 35,5 (Cl) = <strong>58,5 g/mol</strong><br><br>
+                Como cada mol de NaCl tem 1 mol de Na, basta achar o número de mols de NaCl (n = m / MM).
+            </div>
+            
+            <button class="btn-step" onclick="toggleStep('q4-3')">✍️ Passo 3: Cálculo Final</button>
+            <div id="q4-3" class="step-content res">
+                n = 50 g / 58,5 g/mol<br>
+                <em>(A unidade g se cancela).</em><br>
+                <strong>n &approx; 0,854 mol</strong><br><br>
+                Resposta Correta: Alternativa C
+            </div>
+        </div>
+
+        <div class="exercise-card">
+            <div class="q-header">Questão 05 - (ENEM 2011)</div>
+            <p class="enunciado">Uma amostra de 100 mL de sangue de um motorista contém 0,08 g de álcool. Sabendo que o volume total de sangue é 5 L, a massa total de álcool no sangue é:</p>
+            <div class="options">a) 0,4 g | b) 0,8 g | <strong>c) 4,0 g</strong> | d) 8,0 g | e) 40,0 g</div>
+            
+            <button class="btn-step" onclick="toggleStep('q5-1')">🔍 Passo 1: Interpretação</button>
+            <div id="q5-1" class="step-content interp">Temos a concentração de álcool em uma amostra pequena (100 mL) e queremos a massa total no volume total do corpo (5 L). As unidades de volume devem ser as mesmas para fazermos a proporção correta.</div>
+            
+            <button class="btn-step" onclick="toggleStep('q5-2')">⚙️ Passo 2: Estratégia</button>
+            <div id="q5-2" class="step-content estrat">
+                Volume da amostra: 100 mL &rarr; <strong>0,1 L</strong><br>
+                Massa na amostra: 0,08 g<br>
+                Volume total: 5 L<br><br>
+                Usaremos uma Regra de Três ou a fórmula da concentração comum (C = m / V).
+            </div>
+            
+            <button class="btn-step" onclick="toggleStep('q5-3')">✍️ Passo 3: Cálculo Final</button>
+            <div id="q5-3" class="step-content res">
+                Concentração (C) = 0,08 g / 0,1 L = 0,8 g/L<br>
+                Calculando a massa total:<br>
+                m = C &middot; V<br>
+                m = 0,8 g/L &middot; 5 L<br>
+                <em>(A unidade L se cancela).</em><br>
+                <strong>m = 4,0 g</strong><br><br>
+                Resposta Correta: Alternativa C
+            </div>
+        </div>
+
+        <div class="exercise-card">
+            <div class="q-header">Questão 06 - (ENEM 2014)</div>
+            <p class="enunciado">Um remédio contém 20 mg de princípio ativo por mL. Se um paciente deve tomar uma dose de 0,5 g desse princípio, quantos mL ele deve ingerir?</p>
+            <div class="options">a) 2,5 | b) 5,0 | c) 10 | <strong>d) 25</strong> | e) 50</div>
+            
+            <button class="btn-step" onclick="toggleStep('q6-1')">🔍 Passo 1: Interpretação</button>
+            <div id="q6-1" class="step-content interp">O problema informa a concentração em mg/mL e a dose desejada (massa) em gramas (g). A pergunta é sobre o volume (mL). Precisamos igualar as unidades de massa (convertendo a dose de g para mg) antes de calcular.</div>
+            
+            <button class="btn-step" onclick="toggleStep('q6-2')">⚙️ Passo 2: Estratégia</button>
+            <div id="q6-2" class="step-content estrat">
+                Concentração (C): 20 mg/mL<br>
+                Massa desejada (m): 0,5 g &rarr; <strong>500 mg</strong> (Conversão: 0,5 &middot; 1000)<br>
+                Fórmula adaptada: V = m / C
+            </div>
+            
+            <button class="btn-step" onclick="toggleStep('q6-3')">✍️ Passo 3: Cálculo Final</button>
+            <div id="q6-3" class="step-content res">
+                V = 500 mg / 20 mg/mL<br>
+                <em>(A unidade mg se cancela, restando mL).</em><br>
+                V = 50 / 2 mL<br>
+                <strong>V = 25 mL</strong><br><br>
+                Resposta Correta: Alternativa D
+            </div>
+        </div>
+
+        <div class="exercise-card">
+            <div class="q-header">Questão 07 - (ENEM 2017)</div>
+            <p class="enunciado">O ácido clorídrico (HCl) é vendido como "ácido muriático" com concentração de 12 mol/L. Qual o volume desse ácido necessário para preparar 1 L de uma solução 0,12 mol/L?</p>
+            <div class="options">a) 1 mL | <strong>b) 10 mL</strong> | c) 100 mL | d) 120 mL | e) 1200 mL</div>
+            
+            <button class="btn-step" onclick="toggleStep('q7-1')">🔍 Passo 1: Interpretação</button>
+            <div id="q7-1" class="step-content interp">Trata-se de uma Diluição envolvendo molaridade. Temos uma solução muito concentrada (12 mol/L) e queremos descobrir quanto dela precisamos tirar para preparar a solução diluída (0,12 mol/L). Observar as opções de resposta: estão em mL.</div>
+            
+            <button class="btn-step" onclick="toggleStep('q7-2')">⚙️ Passo 2: Estratégia</button>
+            <div id="q7-2" class="step-content estrat">
+                M<sub>1</sub> = 12 mol/L | V<sub>1</sub> = ?<br>
+                M<sub>2</sub> = 0,12 mol/L | V<sub>2</sub> = 1 L &rarr; <strong>1000 mL</strong> (Para o resultado já sair em mL)<br><br>
+                Fórmula: M<sub>1</sub> &middot; V<sub>1</sub> = M<sub>2</sub> &middot; V<sub>2</sub>
+            </div>
+            
+            <button class="btn-step" onclick="toggleStep('q7-3')">✍️ Passo 3: Cálculo Final</button>
+            <div id="q7-3" class="step-content res">
+                12 mol/L &middot; V<sub>1</sub> = 0,12 mol/L &middot; 1000 mL<br>
+                12 &middot; V<sub>1</sub> = 120 mL<br>
+                V<sub>1</sub> = 120 mL / 12<br>
+                <em>(A unidade mol/L se cancela nos dois lados da igualdade).</em><br>
+                <strong>V<sub>1</sub> = 10 mL</strong><br><br>
+                Resposta Correta: Alternativa B
+            </div>
+        </div>
+
+        <div class="exercise-card">
+            <div class="q-header">Questão 08 - (ENEM 2015)</div>
+            <p class="enunciado">Um hospital recebeu 1.000 L de álcool 96% e quer trocá-lo por álcool 70%. Para que a quantidade de etanol puro seja a mesma, o volume de álcool 70% deve ser:</p>
+            <div class="options">a) 1.042 L | <strong>b) 1.371 L</strong> | c) 1.428 L | d) 1.632 L | e) 1.700 L</div>
+            
+            <button class="btn-step" onclick="toggleStep('q8-1')">🔍 Passo 1: Interpretação</button>
+            <div id="q8-1" class="step-content interp">Temos aqui uma relação de equivalência de soluto. O hospital quer que a quantidade de álcool absoluto (o soluto) não mude. É a mesma lógica da diluição (C<sub>1</sub>V<sub>1</sub> = C<sub>2</sub>V<sub>2</sub>), onde buscamos o volume final (V<sub>2</sub>) que manterá a igualdade matemática.</div>
+            
+            <button class="btn-step" onclick="toggleStep('q8-2')">⚙️ Passo 2: Estratégia</button>
+            <div id="q8-2" class="step-content estrat">
+                V<sub>1</sub> = 1.000 L | C<sub>1</sub> = 96%<br>
+                C<sub>2</sub> = 70% | V<sub>2</sub> = ?<br><br>
+                Fórmula: C<sub>1</sub> &middot; V<sub>1</sub> = C<sub>2</sub> &middot; V<sub>2</sub>
+            </div>
+            
+            <button class="btn-step" onclick="toggleStep('q8-3')">✍️ Passo 3: Cálculo Final</button>
+            <div id="q8-3" class="step-content res">
+                96% &middot; 1000 L = 70% &middot; V<sub>2</sub><br>
+                96000 = 70 &middot; V<sub>2</sub><br>
+                V<sub>2</sub> = 96000 L / 70<br>
+                <em>(A unidade % cancela-se de ambos os lados).</em><br>
+                V<sub>2</sub> &approx; 1371,4 L<br>
+                <strong>V<sub>2</sub> = 1.371 L</strong><br><br>
+                Resposta Correta: Alternativa B
+            </div>
+        </div>
+
+        <div class="exercise-card">
+            <div class="q-header">Questão 09 - (ENEM 2020)</div>
+            <p class="enunciado">A concentração de íons fluoreto em uma água é 0,7 mg/L. Em 500 mL dessa água, a massa de fluoreto em miligramas é:</p>
+            <div class="options"><strong>a) 0,35</strong> | b) 0,7 | c) 3,5 | d) 7,0 | e) 35</div>
+            
+            <button class="btn-step" onclick="toggleStep('q9-1')">🔍 Passo 1: Interpretação</button>
+            <div id="q9-1" class="step-content interp">O problema nos dá a concentração em mg/L e o volume da amostra em mL. A resposta é solicitada em miligramas (mg). Precisamos converter o volume para Litros para bater com a unidade de concentração.</div>
+            
+            <button class="btn-step" onclick="toggleStep('q9-2')">⚙️ Passo 2: Estratégia</button>
+            <div id="q9-2" class="step-content estrat">
+                Concentração (C): 0,7 mg/L<br>
+                Volume (V): 500 mL &rarr; <strong>0,5 L</strong><br>
+                Fórmula: m = C &middot; V
+            </div>
+            
+            <button class="btn-step" onclick="toggleStep('q9-3')">✍️ Passo 3: Cálculo Final</button>
+            <div id="q9-3" class="step-content res">
+                m = 0,7 mg/L &middot; 0,5 L<br>
+                <em>(A unidade L se cancela).</em><br>
+                <strong>m = 0,35 mg</strong><br><br>
+                Resposta Correta: Alternativa A
+            </div>
+        </div>
+
+        <div class="exercise-card">
+            <div class="q-header">Questão 10 - (FUVEST)</div>
+            <p class="enunciado">Uma solução de densidade 1,2 g/mL contém 20% em massa de soluto. A massa de soluto em 500 mL de solução é:</p>
+            <div class="options">a) 100 g | <strong>b) 120 g</strong> | c) 240 g | d) 480 g | e) 600 g</div>
+            
+            <button class="btn-step" onclick="toggleStep('q10-1')">🔍 Passo 1: Interpretação</button>
+            <div id="q10-1" class="step-content interp">O exercício pede a massa de soluto. Temos a densidade (que calcula a massa total de uma solução a partir do seu volume) e o título (20%), que informa quanto dessa massa total corresponde efetivamente ao soluto.</div>
+            
+            <button class="btn-step" onclick="toggleStep('q10-2')">⚙️ Passo 2: Estratégia</button>
+            <div id="q10-2" class="step-content estrat">
+                Achar a massa total da solução (m<sub>sol</sub>) usando a densidade:<br>
+                d = 1,2 g/mL e V = 500 mL.<br>
+                Aplicar os 20% sobre essa massa total.
+            </div>
+            
+            <button class="btn-step" onclick="toggleStep('q10-3')">✍️ Passo 3: Cálculo Final</button>
+            <div id="q10-3" class="step-content res">
+                Massa Total:<br>
+                m<sub>sol</sub> = d &middot; V = 1,2 g/mL &middot; 500 mL<br>
+                <em>(A unidade mL se cancela).</em><br>
+                m<sub>sol</sub> = 600 g<br><br>
+                Massa do Soluto:<br>
+                m<sub>1</sub> = 600 g &middot; 20% (ou 0,20)<br>
+                <strong>m<sub>1</sub> = 120 g</strong><br><br>
+                Resposta Correta: Alternativa B
+            </div>
+        </div>
+
+        <div class="exercise-card">
+            <div class="q-header">Questão 11 - (ENEM 2012)</div>
+            <p class="enunciado">Um pesticida apresenta concentração de 0,5 g/L. Para preparar 100 litros de uma mistura para pulverização com 0,005 g/L, quanto do pesticida concentrado é necessário?</p>
+            <div class="options">a) 0,5 L | <strong>b) 1,0 L</strong> | c) 2,0 L | d) 5,0 L | e) 10 L</div>
+            
+            <button class="btn-step" onclick="toggleStep('q11-1')">🔍 Passo 1: Interpretação</button>
+            <div id="q11-1" class="step-content interp">Problema clássico de diluição. Temos uma solução muito forte (0,5 g/L) e precisamos de um volume final de 100 L numa versão fraca (0,005 g/L). Queremos o volume inicial da forte.</div>
+            
+            <button class="btn-step" onclick="toggleStep('q11-2')">⚙️ Passo 2: Estratégia</button>
+            <div id="q11-2" class="step-content estrat">
+                C<sub>1</sub> = 0,5 g/L | V<sub>1</sub> = ?<br>
+                C<sub>2</sub> = 0,005 g/L | V<sub>2</sub> = 100 L<br><br>
+                Fórmula: C<sub>1</sub> &middot; V<sub>1</sub> = C<sub>2</sub> &middot; V<sub>2</sub>
+            </div>
+            
+            <button class="btn-step" onclick="toggleStep('q11-3')">✍️ Passo 3: Cálculo Final</button>
+            <div id="q11-3" class="step-content res">
+                0,5 g/L &middot; V<sub>1</sub> = 0,005 g/L &middot; 100 L<br>
+                0,5 &middot; V<sub>1</sub> = 0,5 L<br>
+                V<sub>1</sub> = 0,5 L / 0,5<br>
+                <em>(A unidade g/L cancela-se).</em><br>
+                <strong>V<sub>1</sub> = 1,0 L</strong><br><br>
+                Resposta Correta: Alternativa B
+            </div>
+        </div>
+
+        <div class="exercise-card">
+            <div class="q-header">Questão 12 - (ENEM 2018)</div>
+            <p class="enunciado">O soro fisiológico é NaCl a 0,9% (m/v). Quantos gramas de sal existem em um frasco de 250 mL?</p>
+            <div class="options">a) 0,225 | b) 0,9 | c) 1,8 | <strong>d) 2,25</strong> | e) 4,5</div>
+            
+            <button class="btn-step" onclick="toggleStep('q12-1')">🔍 Passo 1: Interpretação</button>
+            <div id="q12-1" class="step-content interp">A notação % (m/v) significa gramas de soluto para cada 100 mL de solução. Ou seja, a concentração é 0,9 g / 100 mL. O problema quer saber a massa em 250 mL.</div>
+            
+            <button class="btn-step" onclick="toggleStep('q12-2')">⚙️ Passo 2: Estratégia</button>
+            <div id="q12-2" class="step-content estrat">
+                Faremos uma regra de três direta baseada no conceito do título m/v:<br>
+                0,9 g &rarr; 100 mL<br>
+                X g &rarr; 250 mL
+            </div>
+            
+            <button class="btn-step" onclick="toggleStep('q12-3')">✍️ Passo 3: Cálculo Final</button>
+            <div id="q12-3" class="step-content res">
+                100 &middot; X = 0,9 &middot; 250<br>
+                X = 225 g / 100<br>
+                <em>(O mL cancela com o mL na proporção).</em><br>
+                <strong>X = 2,25 g</strong><br><br>
+                Resposta Correta: Alternativa D
+            </div>
+        </div>
+
+        <div class="exercise-card">
+            <div class="q-header">Questão 13 - (ENEM 2019)</div>
+            <p class="enunciado">Uma análise de água revelou 10 ppm de mercúrio. Isso equivale a 10 mg de soluto por litro. Em um tanque de 2.000 L, a massa de mercúrio é:</p>
+            <div class="options">a) 0,2 g | b) 2,0 g | <strong>c) 20 g</strong> | d) 200 g | e) 2.000 g</div>
+            
+            <button class="btn-step" onclick="toggleStep('q13-1')">🔍 Passo 1: Interpretação</button>
+            <div id="q13-1" class="step-content interp">O próprio enunciado explica que ppm em soluções aquosas corresponde a mg/L. Queremos a massa total. O desafio é que o resultado natural será em miligramas, mas as opções de resposta exigem gramas.</div>
+            
+            <button class="btn-step" onclick="toggleStep('q13-2')">⚙️ Passo 2: Estratégia</button>
+            <div id="q13-2" class="step-content estrat">
+                C = 10 mg/L | V = 2.000 L<br>
+                m = C &middot; V<br>
+                Conversão final: Dividir mg por 1000 para virar g.
+            </div>
+            
+            <button class="btn-step" onclick="toggleStep('q13-3')">✍️ Passo 3: Cálculo Final</button>
+            <div id="q13-3" class="step-content res">
+                m = 10 mg/L &middot; 2000 L<br>
+                <em>(A unidade L se cancela).</em><br>
+                m = 20.000 mg<br><br>
+                Conversão para gramas:<br>
+                m = 20.000 mg / 1000 mg/g<br>
+                <strong>m = 20 g</strong><br><br>
+                Resposta Correta: Alternativa C
+            </div>
+        </div>
+
+        <div class="exercise-card">
+            <div class="q-header">Questão 14 - (VUNESP)</div>
+            <p class="enunciado">A massa molar da ureia é 60 g/mol. Uma solução 0,5 mol/L de ureia contém quantos gramas do soluto em 2 L?</p>
+            <div class="options">a) 30 g | <strong>b) 60 g</strong> | c) 90 g | d) 120 g | e) 150 g</div>
+            
+            <button class="btn-step" onclick="toggleStep('q14-1')">🔍 Passo 1: Interpretação</button>
+            <div id="q14-1" class="step-content interp">Problema direto que exige encontrar a massa (m<sub>1</sub>) a partir da Molaridade (M), Massa Molar (MM) e Volume (V). Como o volume já está em Litros, não precisamos de conversão inicial.</div>
+            
+            <button class="btn-step" onclick="toggleStep('q14-2')">⚙️ Passo 2: Estratégia</button>
+            <div id="q14-2" class="step-content estrat">
+                M = 0,5 mol/L | MM = 60 g/mol | V = 2 L<br>
+                Fórmula: M = m<sub>1</sub> / (MM &middot; V) ou m<sub>1</sub> = M &middot; MM &middot; V
+            </div>
+            
+            <button class="btn-step" onclick="toggleStep('q14-3')">✍️ Passo 3: Cálculo Final</button>
+            <div id="q14-3" class="step-content res">
+                m<sub>1</sub> = 0,5 mol/L &middot; 60 g/mol &middot; 2 L<br>
+                <em>(mol cancela com mol, e L cancela com L, restando g).</em><br>
+                m<sub>1</sub> = 30 g/L &middot; 2 L<br>
+                <strong>m<sub>1</sub> = 60 g</strong><br><br>
+                Resposta Correta: Alternativa B
+            </div>
+        </div>
+
+        <div class="exercise-card">
+            <div class="q-header">Questão 15 - (ENEM 2010)</div>
+            <p class="enunciado">O limite de chumbo na água é 0,01 mg/L. Uma amostra de 500 mL continha 0,002 mg. Esta água está:</p>
+            <div class="options"><strong>a) Dentro do limite (0,004 mg/L).</strong> | b) No limite exato. | c) Fora do limite (0,04 mg/L). | d) Dentro do limite (0,001 mg/L). | e) Fora do limite (0,1 mg/L).</div>
+            
+            <button class="btn-step" onclick="toggleStep('q15-1')">🔍 Passo 1: Interpretação</button>
+            <div id="q15-1" class="step-content interp">Precisamos descobrir qual é a concentração real da nossa amostra em mg/L e depois compará-la com o limite permitido (0,01 mg/L).</div>
+            
+            <button class="btn-step" onclick="toggleStep('q15-2')">⚙️ Passo 2: Estratégia</button>
+            <div id="q15-2" class="step-content estrat">
+                Massa da amostra: 0,002 mg<br>
+                Volume da amostra: 500 mL &rarr; <strong>0,5 L</strong><br>
+                Fórmula: C = m / V
+            </div>
+            
+            <button class="btn-step" onclick="toggleStep('q15-3')">✍️ Passo 3: Cálculo Final</button>
+            <div id="q15-3" class="step-content res">
+                C = 0,002 mg / 0,5 L<br>
+                <strong>C = 0,004 mg/L</strong><br><br>
+                Comparação: 0,004 mg/L é menor que 0,01 mg/L. Logo, está dentro do limite.<br>
+                Resposta Correta: Alternativa A
+            </div>
+        </div>
+
+        <div class="exercise-card">
+            <div class="q-header">Questão 16 - (ENEM 2016)</div>
+            <p class="enunciado">Um fertilizante tem 20% de nitrogênio. Em 50 kg de fertilizante, a massa de nitrogênio é:</p>
+            <div class="options">a) 1 kg | b) 5 kg | <strong>c) 10 kg</strong> | d) 20 kg | e) 40 kg</div>
+            
+            <button class="btn-step" onclick="toggleStep('q16-1')">🔍 Passo 1: Interpretação</button>
+            <div id="q16-1" class="step-content interp">O problema traz um conceito de Título ou porcentagem em massa puro. Queremos saber a massa equivalente a 20% do peso total da embalagem do fertilizante.</div>
+            
+            <button class="btn-step" onclick="toggleStep('q16-2')">⚙️ Passo 2: Estratégia</button>
+            <div id="q16-2" class="step-content estrat">
+                Massa total: 50 kg<br>
+                Fração de Nitrogênio: 20% (ou 0,20)<br>
+                Cálculo: Multiplicar a massa total pela porcentagem.
+            </div>
+            
+            <button class="btn-step" onclick="toggleStep('q16-3')">✍️ Passo 3: Cálculo Final</button>
+            <div id="q16-3" class="step-content res">
+                m<sub>nitrogênio</sub> = 50 kg &middot; 20 / 100<br>
+                m<sub>nitrogênio</sub> = 50 kg &middot; 0,2<br>
+                <strong>m<sub>nitrogênio</sub> = 10 kg</strong><br><br>
+                Resposta Correta: Alternativa C
+            </div>
+        </div>
+
+        <div class="exercise-card">
+            <div class="q-header">Questão 17 - (UERJ)</div>
+            <p class="enunciado">Para preparar 500 mL de solução 0,2 mol/L de glucose (180 g/mol), a massa necessária é:</p>
+            <div class="options">a) 9 g | <strong>b) 18 g</strong> | c) 36 g | d) 72 g | e) 180 g</div>
+            
+            <button class="btn-step" onclick="toggleStep('q17-1')">🔍 Passo 1: Interpretação</button>
+            <div id="q17-1" class="step-content interp">Novamente, pede-se a massa (m<sub>1</sub>) a partir da Molaridade. Como o volume está em mL, a primeira providência é converter para Litros.</div>
+            
+            <button class="btn-step" onclick="toggleStep('q17-2')">⚙️ Passo 2: Estratégia</button>
+            <div id="q17-2" class="step-content estrat">
+                V = 500 mL &rarr; <strong>0,5 L</strong><br>
+                M = 0,2 mol/L | MM = 180 g/mol<br>
+                Fórmula: m<sub>1</sub> = M &middot; MM &middot; V
+            </div>
+            
+            <button class="btn-step" onclick="toggleStep('q17-3')">✍️ Passo 3: Cálculo Final</button>
+            <div id="q17-3" class="step-content res">
+                m<sub>1</sub> = 0,2 mol/L &middot; 180 g/mol &middot; 0,5 L<br>
+                <em>(mol e L se cancelam, sobrando g).</em><br>
+                m<sub>1</sub> = 36 g/L &middot; 0,5 L<br>
+                <strong>m<sub>1</sub> = 18 g</strong><br><br>
+                Resposta Correta: Alternativa B
+            </div>
+        </div>
+
+        <div class="exercise-card">
+            <div class="q-header">Questão 18 - (ENEM 2022)</div>
+            <p class="enunciado">Uma bebida energética de 200 mL contém 80 mg de cafeína. A concentração em g/L é:</p>
+            <div class="options">a) 0,04 | <strong>b) 0,4</strong> | c) 4,0 | d) 40 | e) 400</div>
+            
+            <button class="btn-step" onclick="toggleStep('q18-1')">🔍 Passo 1: Interpretação</button>
+            <div id="q18-1" class="step-content interp">O problema nos dá massa em mg e volume em mL, mas pede a resposta em g/L. Precisamos realizar dupla conversão antes de dividir, garantindo que tudo bata com a unidade final solicitada.</div>
+            
+            <button class="btn-step" onclick="toggleStep('q18-2')">⚙️ Passo 2: Estratégia</button>
+            <div id="q18-2" class="step-content estrat">
+                Volume (V): 200 mL &rarr; <strong>0,2 L</strong> (dividir por 1000)<br>
+                Massa (m): 80 mg &rarr; <strong>0,08 g</strong> (dividir por 1000)<br>
+                Fórmula: C = m / V
+            </div>
+            
+            <button class="btn-step" onclick="toggleStep('q18-3')">✍️ Passo 3: Cálculo Final</button>
+            <div id="q18-3" class="step-content res">
+                C = 0,08 g / 0,2 L<br>
+                C = 0,8 g / 2 L<br>
+                <strong>C = 0,4 g/L</strong><br><br>
+                Resposta Correta: Alternativa B
+            </div>
+        </div>
+
+        <div class="exercise-card">
+            <div class="q-header">Questão 19 - (ENEM 2015)</div>
+            <p class="enunciado">Água sanitária é NaClO a 2,5% em massa. Em 1 kg de solução, a massa de NaClO é:</p>
+            <div class="options">a) 0,25 g | b) 2,5 g | <strong>c) 25 g</strong> | d) 250 g | e) 2.500 g</div>
+            
+            <button class="btn-step" onclick="toggleStep('q19-1')">🔍 Passo 1: Interpretação</button>
+            <div id="q19-1" class="step-content interp">Temos a porcentagem em massa (2,5%) e a massa total da solução (1 kg). Observando as opções de resposta, notamos que todas estão em gramas (g). Portanto, precisamos converter o quilograma para gramas.</div>
+            
+            <button class="btn-step" onclick="toggleStep('q19-2')">⚙️ Passo 2: Estratégia</button>
+            <div id="q19-2" class="step-content estrat">
+                Massa total (m<sub>sol</sub>): 1 kg &rarr; <strong>1000 g</strong><br>
+                Título (&tau;): 2,5% (ou 0,025)<br>
+                Fórmula: m<sub>1</sub> = m<sub>sol</sub> &middot; &tau;
+            </div>
+            
+            <button class="btn-step" onclick="toggleStep('q19-3')">✍️ Passo 3: Cálculo Final</button>
+            <div id="q19-3" class="step-content res">
+                m<sub>1</sub> = 1000 g &middot; 2,5 / 100<br>
+                m<sub>1</sub> = 10 &middot; 2,5 g<br>
+                <strong>m<sub>1</sub> = 25 g</strong><br><br>
+                Resposta Correta: Alternativa C
+            </div>
+        </div>
+
+        <div class="exercise-card">
+            <div class="q-header">Questão 20 - (ENEM 2023)</div>
+            <p class="enunciado">Se a densidade do álcool é 0,8 g/mL, qual o volume de 160 g desta substância?</p>
+            <div class="options">a) 128 mL | b) 160 mL | <strong>c) 200 mL</strong> | d) 250 mL | e) 320 mL</div>
+            
+            <button class="btn-step" onclick="toggleStep('q20-1')">🔍 Passo 1: Interpretação</button>
+            <div id="q20-1" class="step-content interp">O problema nos pede o volume (mL) de uma substância pura, tendo em mãos sua massa e sua densidade. É uma aplicação direta da física para o álcool absoluto.</div>
+            
+            <button class="btn-step" onclick="toggleStep('q20-2')">⚙️ Passo 2: Estratégia</button>
+            <div id="q20-2" class="step-content estrat">
+                Densidade (d): 0,8 g/mL<br>
+                Massa (m): 160 g<br>
+                Fórmula: d = m / V &rarr; V = m / d
+            </div>
+            
+            <button class="btn-step" onclick="toggleStep('q20-3')">✍️ Passo 3: Cálculo Final</button>
+            <div id="q20-3" class="step-content res">
+                V = 160 g / 0,8 g/mL<br>
+                <em>(A unidade g se cancela, e o mL passa para cima).</em><br>
+                V = 1600 / 8 mL<br>
+                <strong>V = 200 mL</strong><br><br>
+                Resposta Correta: Alternativa C
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="congrats-card">
+        <h2>🏆 Excelente trabalho, Alice!</h2>
+        <p>Resolver essas 20 questões com esse nível de detalhe mostra o quão dedicada você é. Use e abuse desses passos sempre que bater aquela dúvida. Você vai longe!</p>
+    </footer>
+</div>
+
+<script src="script1.js"></script>
+</body>
+</html>

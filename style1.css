@@ -1,0 +1,139 @@
+:root {
+    --primary: #1a5276;
+    --accent: #16a085;
+    --bg: #f4f7f6;
+    --white: #ffffff;
+    --text: #2c3e50;
+    --interp: #e8f4fd;
+    --estrat: #fef9e7;
+    --res: #eafaf1;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px;
+    background: var(--white);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.btn-back {
+    text-decoration: none;
+    color: var(--accent);
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+.btn-back:hover {
+    color: var(--primary);
+}
+
+h1 {
+    color: var(--primary);
+    margin: 10px 0;
+}
+
+.subtitle {
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+.exercise-card {
+    background: var(--white);
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    border-top: 5px solid var(--accent);
+}
+
+.q-header {
+    font-weight: bold;
+    color: var(--primary);
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.enunciado {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.options {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border: 1px dashed #ccc;
+    font-size: 1rem;
+}
+
+.btn-step {
+    background: #ebedef;
+    border: none;
+    padding: 10px 18px;
+    margin-right: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    color: var(--text);
+}
+
+.btn-step:hover {
+    background: #d5d8dc;
+    transform: translateY(-1px);
+}
+
+.step-content {
+    display: none; /* Escondido por padrão */
+    padding: 18px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border-left: 5px solid;
+    font-size: 1.05rem;
+    animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.interp { background-color: var(--interp); border-color: #3498db; }
+.estrat { background-color: var(--estrat); border-color: #f1c40f; }
+.res { background-color: var(--res); border-color: #27ae60; }
+
+.congrats-card {
+    text-align: center;
+    padding: 50px 30px;
+    background: linear-gradient(135deg, #16a085, #1a5276);
+    color: white;
+    border-radius: 15px;
+    margin-top: 60px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.congrats-card h2 { margin-top: 0; }
